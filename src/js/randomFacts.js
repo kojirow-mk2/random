@@ -1,61 +1,16 @@
-//ドアが開いてるか
-let doorsOpen = false;
-
-// 外部ファイルから雑学情報を読み込む
-function fetchZatugaku() {
-    fetch('../data/zatugaku.txt')
-        .then(response => response.text())
-        .then(data => {
-            // 雑学の配列を取得
-            const zatugaku = data.split('\n').filter(line => line.trim() !== '');
-            // ランダムな項目を選択して表示
-            showRandomItem(zatugaku);
-        })
-        .catch(error => {
-            console.error('Error fetching zatugaku:', error);
-        });
-}
-
-// ランダムな項目を選択して表示する関数
-function showRandomItem(zatugaku) {
-    // 配列からランダムな要素を選択
-    const randomIndex = Math.floor(Math.random() * zatugaku.length);
-    const randomItem = zatugaku[randomIndex];
-
-    // ランダムに選択された項目を表示
-    const outputElement = document.getElementById("output");
-    outputElement.innerHTML = `<p>${randomItem}</p>`;
-}
-
-
-function onSubmitForm(event) {
-    event.preventDefault();
-    fetchZatugaku();
-    toggleDoors();
-}
-
-
-// ドアを開閉する関数
-function toggleDoors() {
-    if (doorsOpen) {
-        closeDoors();
+document.getElementById("open-button").addEventListener("click", function() {
+    const leftDoor = document.getElementById("left-door");
+    const rightDoor = document.getElementById("right-door");
+    
+    // 左ドアの現在のtransformスタイルを取得
+    const leftDoorTransform = leftDoor.style.transform;
+    
+    // ドアが閉じている場合は開け、開いている場合は閉じる
+    if (leftDoorTransform === "rotateY(90deg)" && rightDoor.style.transform === "rotateY(-90deg)") {
+        leftDoor.style.transform = "rotateY(0deg)";
+        rightDoor.style.transform = "rotateY(0deg)";
     } else {
-        openDoors();
+        leftDoor.style.transform = "rotateY(140deg)";
+        rightDoor.style.transform = "rotateY(-140deg)";
     }
-}
-
-
-// フォームが送信されたときに関数を呼び出す
-function openDoors(event) {
-
-    document.getElementById("left-door").style.transform = "rotateY(-140deg)";
-    document.getElementById("right-door").style.transform = "rotateY(140deg)";
-
-}
-
-// 戻るボタンの処理
-function closeDoors() {
-
-    document.getElementById("left-door").style.transform = "";
-    document.getElementById("right-door").style.transform = "";
-}
+});

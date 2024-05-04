@@ -1,38 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雑学ランダム選択</title>
-    <!-- JavaScriptファイルの読み込み -->
-    <script src="../js/randomFacts.js"></script>
-    <link rel="stylesheet" href="../css/main.css">
-</head>
-<body>
-    <div id="box">
-        <h1>雑学ランダム選択</h1>
-        <div class="wrapper">
-            <!-- 雑学の表示 -->
-            <div id="output" class="container"></div>
-            <!--戻るボタン-->
-            <!--<button type="submit" onclick="fetchZatugaku(); closeDoors();">戻る</button>-->
-            <!--ドア-->
-            <div id="left-door" class="door">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div id="left-knob" class="knob"></div>
-            </div>
-            <div id="right-door" class="door">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div id="right-knob" class="knob"></div>
+<html lang = "ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>トリビアの扉</title>
+        <script src="../js/randomFacts.js"></script>
+        <link rel="stylesheet" href="../css/main.css">            
+    </head>
+    <body>
+        <div id="door-container">
+            <button id="open-button">ドアを開く</button>
+            <div id="doors">
+                <div id="left-door"></div>
+                <div id="right-door"></div>
             </div>
         </div>
-        <!--フォーム-->
-        <form onsubmit="onSubmitForm(event)">
-            <button type="submit" onclick=" toggleDoors();">ランダムに選択</button>
-        </form>
-    </div>
-</body>
+        <script src="../js/randomFacts.js"></script>
+    </body>
 </html>

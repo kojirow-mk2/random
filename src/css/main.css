@@ -1,94 +1,22 @@
-.container {
-    width: 454px; /* 任意の横幅に設定 */
-    height: 340px;
-    overflow-wrap: break-word; /* テキストがコンテナを超えた場合に改行する */
-    background-image: url("../img/takara.jpeg");
+#door-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    height: 100vh;
-    width: 100%;
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  box{
-    width: 60%;
-  }
-  
-  /*いじるな*/
-  .wrapper {
-    height: 349px;
-    width: 463.4px;
-    border: 5px solid #61412D;
-    position: relative;
-    /* 3D */
-    perspective: 1000px;
-  }
-  
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .door {
-    background-color: #61412D;
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    /* inner layout */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  #left-door {
-    top: 0;
-    left: 0;
-    border-right: 1px solid black;
-    /* transition */
-    transform-origin: left;
-    transition: transform 0.5s;
-  }
-  
-  #right-door {
-    top: 0;
-    right: 0;
-    border-left: 1px solid black;
-    /* transition */
-    transform-origin: right;
-    transition: transform 0.5s;
-  }
-  
-  .shape {
-    border: 4px solid black;
-    width: 100px;
-    height: 130px;
-  }
-  
-  .knob {
-    width: 10px;
-    height: 50px;
-    background-color: #D7DADE;
-    position: absolute;
-  }
-  
-  #left-knob {
-    top: 50%;
-    right: 10px;
-  }
-  
-  #right-knob {
-    top: 50%;
-    left: 10px;
-  }
-  
+#doors {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+
+#left-door {
+  /* 左ドアの回転軸を左側に設定 */
+  transform-origin: center left;
+}
+
+#open-button {
+  margin-bottom: 10px;
+}
+
