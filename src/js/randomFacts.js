@@ -2,6 +2,10 @@ document.getElementById("open-button").addEventListener("click", function() {
     const leftDoor = document.getElementById("left-door");
     const rightDoor = document.getElementById("right-door");
     
+    // 左ドアと右ドアのトランジションを設定して、ドアの開閉速度を遅くします。
+    leftDoor.style.transition = "transform 2s";
+    rightDoor.style.transition = "transform 2s";
+    
     // 左ドアの現在のtransformスタイルを取得
     const leftDoorTransform = leftDoor.style.transform;
     

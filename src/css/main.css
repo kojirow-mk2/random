@@ -5,18 +5,20 @@
   background-image: url("../img/hanabatake.jpeg");
 }
 
-
-
 #doors {
   display: flex;
   justify-content: center;
   height: 100%;
 }
 
+#right-door {
+  /*軸*/
+  transform-origin: right;
+}
 
 #left-door {
   /* 左ドアの回転軸を左側に設定 */
-  transform-origin: center left;
+  transform-origin: left;
   
 }
 
