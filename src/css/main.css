@@ -1,4 +1,5 @@
 
+/* ボタンに縮小アニメーションを追加 */
 #door-container {
   margin: auto;
   margin-top: 20%;
@@ -32,3 +33,33 @@
   margin-bottom: 10px;
 }
 
+#trivia-display {
+  position: absolute; /* 絶対位置 */
+  width: 60%; /* 要素の幅 */
+  top: 50%; /* ドア間の中央に配置するための調整 */
+  left: 50%; /* ドア間の中央に配置するための調整 */
+  transform: translate(-50%, -50%); /* 要素を中央に位置させる */
+  background-color: rgba(255, 255, 255, 0.8); /* 背景色と透明度 */
+  padding: 10px; /* パディング */
+  border-radius: 5px; /* 角を丸くする */
+  display: none; /* 初期状態では非表示 */
+}
+
+/* ボタンの初期スタイル */
+#open-button {
+  margin-bottom: 10px;
+  background-color: #3498db; /* 初期背景色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* アニメーションの速度とタイミング */
+}
+
+/* カーソルを合わせたときのホバースタイル */
+#open-button:hover {
+  transform: scale(1.1); /* ボタンを1.1倍に拡大 */
+  background-color: #2980b9; /* ホバー時の背景色 */
+  color: #ecf0f1; /* ホバー時のテキスト色 */
+}
