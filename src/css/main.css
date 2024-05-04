@@ -3,9 +3,9 @@
   margin: auto;
   margin-top: 20%;
   position: relative;
-  width: 398px;
-  height: 500px;
-  background-image: url("../img/waku.png");
+  width: 480px;
+  height: 600px;
+  background-image: url("../img/haikei.png");
   /*background-image: url("../img/hanabatake.jpeg");*/
 }
 
@@ -18,13 +18,13 @@
 #right-door {
   /*軸*/
   transform-origin: right;
-  margin-top: 15%;
+  margin-top: 17.5%;
 }
 
 #left-door {
   /* 左ドアの回転軸を左側に設定 */
   transform-origin: left;
-  margin-top: 15%;
+  margin-top: 17.5%;
   
 }
 
