@@ -18,7 +18,12 @@
     justify-content: center;
     align-items: center;
   }
+
+  box{
+    width: 60%;
+  }
   
+  /*いじるな*/
   .wrapper {
     height: 349px;
     width: 463.4px;
@@ -87,11 +92,3 @@
     left: 10px;
   }
   
-  /* Door swing effect */
-  .wrapper:hover #left-door{
-    transform: rotateY(-140deg);
-  }
-  
-  .wrapper:hover #right-door{
-    transform: rotateY(140deg);
-  }

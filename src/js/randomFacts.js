@@ -1,3 +1,6 @@
+//ドアが開いてるか
+let doorsOpen = false;
+
 // 外部ファイルから雑学情報を読み込む
 function fetchZatugaku() {
     fetch('../data/zatugaku.txt')
@@ -24,14 +27,35 @@ function showRandomItem(zatugaku) {
     outputElement.innerHTML = `<p>${randomItem}</p>`;
 }
 
-// フォームが送信されたときに関数を呼び出す
+
 function onSubmitForm(event) {
-    event.preventDefault(); // フォームのデフォルト送信を停止
-    fetchZatugaku(); // 雑学情報を読み込む
+    event.preventDefault();
+    fetchZatugaku();
+    toggleDoors();
+}
+
+
+// ドアを開閉する関数
+function toggleDoors() {
+    if (doorsOpen) {
+        closeDoors();
+    } else {
+        openDoors();
+    }
+}
+
+
+// フォームが送信されたときに関数を呼び出す
+function openDoors(event) {
+
+    document.getElementById("left-door").style.transform = "rotateY(-140deg)";
+    document.getElementById("right-door").style.transform = "rotateY(140deg)";
+
 }
 
 // 戻るボタンの処理
-function goBack() {
-    const outputElement = document.getElementById("output");
-    outputElement.innerHTML = ""; // 表示を空にする
+function closeDoors() {
+
+    document.getElementById("left-door").style.transform = "";
+    document.getElementById("right-door").style.transform = "";
 }
