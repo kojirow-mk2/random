@@ -4,6 +4,8 @@
   height: 300px;
 }
 
+
+
 #doors {
   display: flex;
   justify-content: center;
@@ -14,6 +16,11 @@
 #left-door {
   /* 左ドアの回転軸を左側に設定 */
   transform-origin: center left;
+  image: url("../img/left.png")
+}
+
+#right-door{
+  image: url("../img/right.png")
 }
 
 #open-button {
