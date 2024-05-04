@@ -33,5 +33,5 @@ function onSubmitForm(event) {
 // 戻るボタンの処理
 function goBack() {
     const outputElement = document.getElementById("output");
-    outputElement.innerHTML = ""; // 表示を空にすru
+    outputElement.innerHTML = ""; // 表示を空にする
 }
