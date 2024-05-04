@@ -1,8 +1,12 @@
+
 #door-container {
+  margin: auto;
+  margin-top: 20%;
   position: relative;
-  width: 200px;
-  height: 300px;
-  background-image: url("../img/hanabatake.jpeg");
+  width: 398px;
+  height: 500px;
+  background-image: url("../img/waku.png");
+  /*background-image: url("../img/hanabatake.jpeg");*/
 }
 
 #doors {
@@ -14,11 +18,13 @@
 #right-door {
   /*軸*/
   transform-origin: right;
+  margin-top: 15%;
 }
 
 #left-door {
   /* 左ドアの回転軸を左側に設定 */
   transform-origin: left;
+  margin-top: 15%;
   
 }
 
