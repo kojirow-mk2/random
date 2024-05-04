@@ -7,6 +7,7 @@
     <title>雑学ランダム選択</title>
     <!-- JavaScriptファイルの読み込み -->
     <script src="../js/randomFacts.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <h1>雑学ランダム選択</h1>
@@ -14,7 +15,22 @@
     <form onsubmit="onSubmitForm(event)">
         <button type="submit">ランダムに選択</button>
     </form>
-    <!-- 雑学の表示 -->
-    <div id="output"></div>
+    <div class="wrapper">
+        <!-- 雑学の表示 -->
+        <div id="output" class="container"></div>
+        <!--戻るボタン-->
+        <button onclick="goBack()">戻る</button>
+        <!--ドア-->
+        <div id="left-door" class="door">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div id="left-knob" class="knob"></div>
+        </div>
+        <div id="right-door" class="door">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div id="right-knob" class="knob"></div>
+        </div>
+    </div>
 </body>
 </html>

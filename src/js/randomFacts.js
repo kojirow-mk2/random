@@ -29,3 +29,9 @@ function onSubmitForm(event) {
     event.preventDefault(); // フォームのデフォルト送信を停止
     fetchZatugaku(); // 雑学情報を読み込む
 }
+
+// 戻るボタンの処理
+function goBack() {
+    const outputElement = document.getElementById("output");
+    outputElement.innerHTML = ""; // 表示を空にすru
+}
